@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged In</title>
+</head>
+<body>
+    <div>
+        <h1>Coding Dojo</h1>
+        <h2>Welcome {{logged_in_user.fname}}</h2>
+        <a href="/logout">Logout</a>
+    </div>
+    <hr>
+
+    <form action="/postMessage" method="POST">
+        {% csrf_token %}
+        <label for="post">Post a message</label><br>
+        <textarea name="post" id="post" cols="80" rows="5"></textarea>
+        <button>Post a message</button>
+    </form>
+    {% for post in allMessages %}
+    <fieldset>
+        <legend>Messages</legend>
+        <h4>{{post.userPost.fname}} {{post.userPost.lname}} - {{post.created_at|date:"F d Y"}}</h4>
+        <p>{{post.message}}</p>
+        <!-- <a href="/deleteMessage/{{post.id}}">Delete</a> -->
+        <hr>
+            <fieldset>
+                <legend>Comments</legend>
+            {% for comment in allComments %}
+                {% if comment.post.id == post.id %}
+                <fieldset>
+                <h4>{{comment.userComment.fname}} {{comment.userComment.lname}} - {{comment.created_at|date:"F d Y"}}</h4>
+                <p>{{comment.comment}}</p>
+                </fieldset>
+                {% endif %}
+            {% endfor %}
+        </fieldset>
+
+        <form action="/postComment/{{post.id}}" method='POST'>
+            {% csrf_token %}
+            <label for="comment">Post a comment</label><br>
+            <textarea name="comment" id="comment" cols="50" rows="3"></textarea>
+            <button>Add Comment</button>
+        </form>
+        </fieldset>
+    {% endfor %}
+    
+</body>
+</html>

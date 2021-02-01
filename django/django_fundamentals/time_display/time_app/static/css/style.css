@@ -1,0 +1,14 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+    color: rebeccapurple;
+}
+
+h1
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; 
+}

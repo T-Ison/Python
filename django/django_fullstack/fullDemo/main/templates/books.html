@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged In</title>
+</head>
+<body>
+    <a href="/logOut">Logout</a>
+    <a href="/add_book">Add a Book and Review</a>
+    <hr>
+    <h1>Books Dashboard</h1>
+    <h2>Latest Reviews</h2>
+    {% for review in latest_reviews %}
+        <p><a href="/books/{{review.book.id}}">{{review.book.title}}</a> </p>
+        <p>Rating: {{review.rating}}</p>
+        <p><a href="/Users/{{review.reviewer.id}}">{{review.reviewer.alias}}</a> {{review.content}}</p>
+        <hr>
+    {% endfor %}
+    <h2>All books with reviews</h2>
+    {% for book in all_books %}
+        <p><a href="/books/{{book.id}}">{{book.title}}</a></p>
+    {% endfor %}
+
+    
+</body>
+</html>

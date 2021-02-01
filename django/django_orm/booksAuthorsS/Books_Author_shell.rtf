@@ -1,0 +1,228 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red57\green164\blue40;\red55\green239\blue32;\red0\green0\blue0;
+\red63\green151\blue253;\red184\green51\blue37;\red252\green50\blue32;\red209\green113\blue37;}
+{\*\expandedcolortbl;;\cssrgb\c26425\c68732\c20500;\cssrgb\c22317\c93015\c16432;\csgray\c0;
+\cssrgb\c29888\c66838\c99559;\cssrgb\c77738\c28163\c18923;\cssrgb\c100000\c29541\c16201;\cssrgb\c85991\c52029\c18734;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 In [
+\f1\b \cf3 2
+\f0\b0 \cf2 ]: 
+\f1\b from
+\f0\b0 \cf4  
+\f1\b \cf5 main.models
+\f0\b0 \cf4  
+\f1\b \cf2 import
+\f0\b0 \cf4  Book, Author\
+\
+\cf2 In [
+\f1\b \cf3 3
+\f0\b0 \cf2 ]: \cf4 Book.objects.all()\
+\cf6 Out[
+\f1\b \cf7 3
+\f0\b0 \cf6 ]: \cf4 <QuerySet []>\
+\
+\cf2 In [
+\f1\b \cf3 4
+\f0\b0 \cf2 ]: \cf4 Author.objects.all()\
+\cf6 Out[
+\f1\b \cf7 4
+\f0\b0 \cf6 ]: \cf4 <QuerySet []>\
+\
+\cf2 In [
+\f1\b \cf3 5
+\f0\b0 \cf2 ]: \cf4 Book.objects.create(title = \cf8 "C Sharp"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 5
+\f0\b0 \cf6 ]: \cf4 <Book: Book object (1)>\
+\
+\cf2 In [
+\f1\b \cf3 6
+\f0\b0 \cf2 ]: \cf4 Book.objects.create(title = \cf8 "Java"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 6
+\f0\b0 \cf6 ]: \cf4 <Book: Book object (2)>\
+\
+\cf2 In [
+\f1\b \cf3 7
+\f0\b0 \cf2 ]: \cf4 Book.objects.create(title = \cf8 "Python"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 7
+\f0\b0 \cf6 ]: \cf4 <Book: Book object (3)>\
+\
+\cf2 In [
+\f1\b \cf3 8
+\f0\b0 \cf2 ]: \cf4 Book.objects.create(title = \cf8 "PHP"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 8
+\f0\b0 \cf6 ]: \cf4 <Book: Book object (4)>\
+\
+\cf2 In [
+\f1\b \cf3 9
+\f0\b0 \cf2 ]: \cf4 Book.objects.create(title = \cf8 "Ruby"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 9
+\f0\b0 \cf6 ]: \cf4 <Book: Book object (5)>\
+\
+\cf2 In [
+\f1\b \cf3 10
+\f0\b0 \cf2 ]: \cf4 Author.objects.create(fname = \cf8 "Jane"\cf4 , lname = \cf8 "Austen"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 10
+\f0\b0 \cf6 ]: \cf4 <Author: Author object (1)>\
+\
+\cf2 In [
+\f1\b \cf3 11
+\f0\b0 \cf2 ]: \cf4 Author.objects.create(fname = \cf8 "Emily"\cf4 , lname = \cf8 "Dickenson"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 11
+\f0\b0 \cf6 ]: \cf4 <Author: Author object (2)>\
+\
+\cf2 In [
+\f1\b \cf3 12
+\f0\b0 \cf2 ]: \cf4 Author.objects.create(fname = \cf8 "Fyodor"\cf4 , lname = \cf8 "Dostoevsky"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 12
+\f0\b0 \cf6 ]: \cf4 <Author: Author object (3)>\
+\
+\cf2 In [
+\f1\b \cf3 13
+\f0\b0 \cf2 ]: \cf4 Author.objects.create(fname = \cf8 "William"\cf4 , lname = \cf8 "Shakespeare"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 13
+\f0\b0 \cf6 ]: \cf4 <Author: Author object (4)>\
+\
+\cf2 In [
+\f1\b \cf3 14
+\f0\b0 \cf2 ]: \cf4 Author.objects.create(fname = \cf8 "Lao"\cf4 , lname = \cf8 "Tzu"\cf4 )\
+\cf6 Out[
+\f1\b \cf7 14
+\f0\b0 \cf6 ]: \cf4 <Author: Author object (5)>\
+\
+\cf2 In [
+\f1\b \cf3 1
+\f0\b0 \cf2 ]: 
+\f1\b from
+\f0\b0 \cf4  
+\f1\b \cf5 main.models
+\f0\b0 \cf4  
+\f1\b \cf2 import
+\f0\b0 \cf4  Book, Author\
+\
+\cf2 In [
+\f1\b \cf3 2
+\f0\b0 \cf2 ]: \cf4 changeBook1 = Book.objects.get(\cf2 id\cf4  = \cf2 1\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 3
+\f0\b0 \cf2 ]: \cf4 changeBook1.title = \cf8 "C#"\cf4 \
+\
+\cf2 In [
+\f1\b \cf3 4
+\f0\b0 \cf2 ]: \cf4 changeBook1.save()\
+\
+\cf2 In [
+\f1\b \cf3 5
+\f0\b0 \cf2 ]: \cf4 editAuthor1 = Author.objects.get(\cf2 id\cf4  = \cf2 4\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 6
+\f0\b0 \cf2 ]: \cf4 editAuthor1.fname = \cf8 "Bill"\cf4 \
+\
+\cf2 In [
+\f1\b \cf3 7
+\f0\b0 \cf2 ]: \cf4 editAuthor1.save()\
+\
+\cf2 In [
+\f1\b \cf3 8
+\f0\b0 \cf2 ]: \cf4 Book1 = Book.objects.get(\cf2 id\cf4  = \cf2 1\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 9
+\f0\b0 \cf2 ]: \cf4 Book2 = Book.objects.get(\cf2 id\cf4  = \cf2 2\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 10
+\f0\b0 \cf2 ]: \cf4 Author1 = Author.objects.get(\cf2 id\cf4  = \cf2 1\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 11
+\f0\b0 \cf2 ]: \cf4 Author1.books.add(Book1)\
+\
+\cf2 In [
+\f1\b \cf3 12
+\f0\b0 \cf2 ]: \cf4 Author1.books.add(Book2)\
+\
+\cf2 In [
+\f1\b \cf3 13
+\f0\b0 \cf2 ]: \cf4 Book3 = Book.objects.get(\cf2 id\cf4  = \cf2 3\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 14
+\f0\b0 \cf2 ]: \cf4 Book4 = Book.objects.get(\cf2 id\cf4  = \cf2 4\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 15
+\f0\b0 \cf2 ]: \cf4 Book5 = Book.objects.get(\cf2 id\cf4  = \cf2 5\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 16
+\f0\b0 \cf2 ]: \cf4 Author2 = Author.objects.get(\cf2 id\cf4  = \cf2 2\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 17
+\f0\b0 \cf2 ]: \cf4 Author3 = Author.objects.get(\cf2 id\cf4  = \cf2 3\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 18
+\f0\b0 \cf2 ]: \cf4 Author4 = Author.objects.get(\cf2 id\cf4  = \cf2 4\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 19
+\f0\b0 \cf2 ]: \cf4 Author5 = Author.objects.get(\cf2 id\cf4  = \cf2 5\cf4 )\
+\
+\cf2 In [
+\f1\b \cf3 20
+\f0\b0 \cf2 ]: \cf4 Author2.books.add(Book1, Book2, Book3)\
+\
+\cf2 In [
+\f1\b \cf3 21
+\f0\b0 \cf2 ]: \cf4 Author3.books.add(Book1, Book2, Book3, Book4)\
+\
+\cf2 In [
+\f1\b \cf3 22
+\f0\b0 \cf2 ]: \cf4 Author4.books.add(Book1, Book2, Book3, Book4, Book5)\
+\
+\cf2 In [
+\f1\b \cf3 23
+\f0\b0 \cf2 ]: \cf4 Book3.authors.all()\
+\
+\cf2 In [
+\f1\b \cf3 24
+\f0\b0 \cf2 ]: \cf4 Book3.authors.all().values()\
+\
+\cf2 In [
+\f1\b \cf3 25
+\f0\b0 \cf2 ]: \cf4 Book3.authors.remove(Author1)\
+\
+\cf2 In [
+\f1\b \cf3 26
+\f0\b0 \cf2 ]: \cf4 Book3.authors.all().values()\
+\
+\cf2 In [
+\f1\b \cf3 27
+\f0\b0 \cf2 ]: \cf4 Author5.books.add(Book2)\
+\
+\cf2 In [
+\f1\b \cf3 28
+\f0\b0 \cf2 ]: \cf4 Author3.books.all()\
+\
+\cf2 In [
+\f1\b \cf3 29
+\f0\b0 \cf2 ]: \cf4 Author3.books.all().values()\
+\
+\cf2 In [
+\f1\b \cf3 30
+\f0\b0 \cf2 ]: \cf4 Book5.authors.all()}

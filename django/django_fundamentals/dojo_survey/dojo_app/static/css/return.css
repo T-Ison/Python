@@ -1,0 +1,36 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid pink; */
+}
+body
+{
+    width: 600px;
+    min-height: 200px;
+    margin: 50px auto;
+    justify-content: center;
+    border: 5px solid black;
+}
+
+h2
+{
+    text-align: center;
+    background-color: lightcyan;
+    margin-bottom: 15px;
+}
+
+form
+{
+    justify-content: space-between;
+    display: inline-block;
+    text-align: right;
+    padding-left: 20px;
+}
+
+form p
+{
+    margin-bottom: 15px;
+    text-align: left;
+}

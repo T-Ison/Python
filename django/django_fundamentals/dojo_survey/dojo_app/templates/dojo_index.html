@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
+</head>
+<body>
+    <h1>Dojo Survey</h1>
+    <form action='/processing' method="post">
+    {% csrf_token %}
+        <p>Your Name: <input type="text" name="name" id="name"></p>
+
+        <p>Dojo Location: <input type="text" name="location" id="location"></p>
+
+        <p>Favorite Language: <input type="text" name="language" id="language"></p>
+        
+
+        <p>Comments (option): <input type="text" name="comments" id="comments"></p>
+
+        <button>Submit</button>    
+    </form>
+</body>
+</html>

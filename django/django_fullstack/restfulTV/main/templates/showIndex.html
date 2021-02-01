@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows</title>
+</head>
+<body>
+    <h1>All Shows</h1>
+    <h2>test</h2>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Network</th>
+            <th>Release Date</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for show in allShows %}
+            <tr>
+                <td>{{show.id}}</td>
+                <td>{{show.title}}</td>
+                <td>{{show.networks.first.name}}</td>
+                <td>{{show.reDate}}</td>
+                <td><a href="/shows/{{show.id}}">Show </a><a href="shows/{{show.id}}/edit">Edit </a><a href="shows/{{show.id}}/destroy">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <!-- <a href="/shows/new">Add a New Show</a> -->
+</body>
+</html>

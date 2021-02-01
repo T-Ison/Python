@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <h1>Ninja Gold</h1>
+    <h2>Get that money</h2>
+
+    <form action="process" method="POST" >
+        {% csrf_token %}
+        <p>Your Gold: {{request.session.moneyBag}} </p>
+    </form>
+
+    
+    <div class="locations"> 
+        <h3>Farm</h3>
+        <p>(earns 10 - 20 gold)</p>
+        <form action="process" method="POST">
+            {% csrf_token %}
+            <input type="submit" name="choice" value="farm">
+        </form> 
+    </div>
+    <div class="locations"> 
+        <h3>Cave</h3>
+        <p>(earns 5 - 10 gold)</p>
+        <form action="process" method="POST">
+            {% csrf_token %}
+            <input type="submit" name="choice" value="cave">
+        </form> 
+    </div>
+    <div class="locations"> 
+        <h3>House</h3>
+        <p>(earns 2 - 5 gold)</p>
+        <form action="process" method="POST">
+            {% csrf_token %}
+            <input type="submit" name="choice" value="house">
+        </form> 
+    </div>
+    <div class="locations"> 
+        <h3>Casino</h3>
+        <p>(earns/takes 0 - 50 gold)</p>
+        <form action="process" method="POST">
+            {% csrf_token %}
+            <input type="submit" name="choice" value="casino">
+        </form> 
+    </div>
+
+    <div class="updates">
+        <p>Activities:</p>
+        {% for message in request.session.activityLog %}
+            <p>{{message}}</p>
+        {% endfor %}
+    </div>
+
+    <form action="reset">
+        <button>Reset</button>
+    </form>
+</body>
+</html>

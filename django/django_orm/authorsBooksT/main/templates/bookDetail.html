@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <h2>{{book.title}}</h2>
+    <h4>ID {{book.id}}</h4>
+    <h4>Description: {{book.desc}}</h4>
+    
+    <h4>Authors:</h4>
+    {% for author in book.authors.all %}    <!-- this book refers to context from bookDetail -->
+        <p>-{{author.fname}} {{author.lname}}</p>
+    {% endfor %}
+    <form action="/addAuthor_toBooks" method="POST">
+        {% csrf_token %}
+        <select name="author_id" id="author_id">
+            {% for author in allAuthors %}
+                <option value="{{author.id}}">{{author.fname}} {{author.lname}}</option>
+            {% endfor %}
+        </select>
+        <input type="hidden" name="book_id" value="{{book.id}}">
+        <button>Add</button>
+    </form>
+</body>
+</html>
